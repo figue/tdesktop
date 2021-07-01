@@ -98,6 +98,7 @@ jobs:
           echo '${{ secrets.ALPHA_PRIVATE }}' >> alpha_private.h
           echo '${{ secrets.PACKER_PRIVATE }}' >> packer_private.h
 
+          cd ..
 
       - name: Telegram Desktop build.
         run: |
