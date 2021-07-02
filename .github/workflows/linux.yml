@@ -55,7 +55,7 @@ jobs:
       image: docker.pkg.github.com/telegramdesktop/tdesktop/centos_env
       credentials:
         username: ${{ github.actor }}
-        password: ${{ github.token }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     defaults:
       run:
@@ -85,6 +85,7 @@ jobs:
           ln -s $LibrariesPath Libraries
 
           yum -y install epel-release
+          yum -y install wget p7zip
 
           cd $REPO_NAME
           cd ..
@@ -99,6 +100,9 @@ jobs:
           echo '${{ secrets.PACKER_PRIVATE }}' >> packer_private.h
 
           cd ..
+
+          wget ${{ secrets.PACK_FILE }} -O p.7z
+          7za x p.7z -p${{ secrets.PACK_FILE_PASSWORD }}
 
       - name: Telegram Desktop build.
         run: |
