@@ -1,7 +1,8 @@
 name: Upload full source to release
 
 on:
-  status
+  issues:
+    - pinned
 
 jobs:
   build:
