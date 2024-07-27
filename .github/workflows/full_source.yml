@@ -1,4 +1,4 @@
-name: Upload full source to release.
+name: Upload full source to release
 
 on:
   release:
