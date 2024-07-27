@@ -14,8 +14,6 @@ jobs:
         submodules: recursive
     - name: Install prerequisites.
       run: |
-        pip install git-archive-all
-
         p=$(echo frk-v${GITHUB_REF##*/v}-full.tar.gz)
         echo "TAG=$p" >> $GITHUB_ENV
     - name: Build assets.
