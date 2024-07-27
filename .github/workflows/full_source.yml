@@ -2,7 +2,7 @@ name: Upload full source to release
 
 on:
   issues:
-    - pinned
+    types: [pinned]
 
 jobs:
   build:
