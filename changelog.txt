@@ -1,5 +1,9 @@
 5.2.4 beta (24.07.24)
 
+- Test figue
+
+5.2.4 beta (24.07.24)
+
 - Allow opening several web apps.
 - Send location marks and venues.
 
